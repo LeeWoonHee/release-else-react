@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './style.scss';
+
+*{
+  padding:0;
+  margin:0;
+ 
+}
+body{
+  &::-webkit-scrollbar{
+    width:0 !important;
+  }
+  
+}
+.App{
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
+  background:#000;
+ 
+  .carousel {
+    z-index: 999;
+    background: rgba(0, 0, 0, 0);
+    position: relative;
+  }
+
+
+  
+
+    .text-layout{
+      background: rgba(0, 0, 0, 0);
+      position: absolute;
+      top:0;
+      width: 100%;
+      height: calc(var(--vh, 1vh) * 100);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      // z-index: 1;
+      overflow: hidden;
+      z-index: 10000;
+      .release-info {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: start;
+        padding-top: 100px;
+    
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+          padding: 0 16px;
+        }
+    
+        .description-wrapper {
+          overflow: hidden;
+          height:50%;
+          position:relative;
+          //height:500px;
+          @media screen and (max-width: 1280px){
+            //height:20%;
+            //margin-top:25%;
+            //width:80%;
+          }
+        }
+    
+        .main-desc {
+        }
+    
+        .desc {
+          width: 100%;
+          color: #fff;
+          font-family: 'Raleway', sans-serif;
+          font-size: 50px;
+          line-height: 50px;
+          font-weight: 400;
+          position:absolute;
+          //display: none;
+    
+          @media screen and (max-width: 1024px) {
+            line-height: 26px;
+            font-size: 24px;
+            padding-top: 35px;
+          }
+        }
+    
+    
+        .info-title {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          font-family: 'Raleway', 'SUIT';
+          font-size: 16px;
+          font-weight: 500;
+    
+          @media screen and (max-width: 1024px) {
+            font-size: 12px;
+          }
+        }
+      }
+    
+      .item {
+        min-width: 130px;
+        height: 90px;
+        margin: 0 0 20px 20px;
+    
+        @media screen and (max-width: 1024px) {
+          min-width: 70px;
+          height: 48px;
+          margin: 0 0 10px 10px;
+        }
+    
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    
+  }
+ 
+}
+
+
+.bg-g-red {
+  background: radial-gradient(129.1% 117.53% at 49.47% 49.26%, #DE0101 0%, #580000 100%)
+}
+
+.line-h-80 {
+  line-height: 80px;
+  @media screen and (max-width: 1024px) {
+    line-height: 50px;
+  }
+}
+
+.position-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
